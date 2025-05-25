@@ -122,7 +122,11 @@ open class MXBaseListDialog(context: Context) : MXBaseDialog(context) {
             mxRootLay?.setPadding(marginLeft, marginTop, marginRight, marginBottom)
 
 
-            val screenWidth = MXUtils.getScreenWidth(context) - marginLeft - marginRight
+            var screenWidth = MXUtils.getScreenWidth(context) - marginLeft - marginRight
+            // 平板
+            if (MXUtils.getScreenWidthDP(context) > 600) {
+                screenWidth = MXUtils.getScreenWidth(context) / 2
+            }
             mxCardLay?.layoutParams?.width = screenWidth
             btnLay?.layoutParams?.width = screenWidth
         }

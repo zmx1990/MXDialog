@@ -100,6 +100,12 @@ abstract class MXBaseCardDialog(context: Context) : MXBaseDialog(context) {
         val lp = (cardLay.layoutParams as FrameLayout.LayoutParams?)
         lp?.gravity = position.gravity
         lp?.width = MXUtils.getScreenWidth(context) - marginLeft - marginRight
+
+        // 平板
+        if (MXUtils.getScreenWidthDP(context) > 600) {
+            lp?.width = MXUtils.getScreenWidth(context) / 2
+        }
+
         cardLay.layoutParams = lp
         cardLay.translationX =
             MXUtils.dp2px(context, position.translationX ?: 0).toFloat()
