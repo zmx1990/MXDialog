@@ -14,7 +14,7 @@
 ```groovy
     dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
-    implementation 'com.github.zmx1990:MXDialog:1.7.1'
+    implementation 'com.github.zmx1990:MXDialog:1.7.2'
 }
 ```
 
