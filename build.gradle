@@ -1,7 +1,7 @@
 plugins {
-    id 'com.android.application' version '8.5.1' apply false
-    id 'com.android.library' version '8.5.1' apply false
-    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+    id 'com.android.application' version '8.10.0' apply false
+    id 'com.android.library' version '8.10.0' apply false
+    id 'org.jetbrains.kotlin.android' version '2.1.0' apply false
 }
 
 tasks.register('clean', Delete) {
@@ -15,5 +15,5 @@ ext {
     minSdkVersion = 19
 
     versionCode = 1
-    versionName = "1.7.0"
+    versionName = "1.7.1"
 }
